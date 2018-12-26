@@ -2,7 +2,7 @@
 
 #### 通信类型
 
-+ API(Application programming interface)
++ Web API(Application programming interface)
 + WS(Web Service)
 
 #### 通信协议
