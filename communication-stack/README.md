@@ -2,20 +2,21 @@
 
 #### 通信类型
 
-+ Web API(Application programming interface)
++ API(Application programming interface)
 + WS(Web Service)
 
-#### 通信协议
+#### 常用通信栈
 
-+ json + http
++ rest + json + http
 + soap + xml + http
 + grpc
 + graphQL
 
-#### 架构风格
+#### web service 协议
 
 + rest
-+ web service
++ soap
++ rpc
 
 #### java 远程调用标准
 
