@@ -7,14 +7,14 @@
 
 #### 通信协议
 
-+ http + json
-+ soap
++ json + http
++ soap + xml + http
 + grpc
 + graphQL
 
 #### 架构风格
 
-+ restful
++ rest
 + web service
 
 #### java 远程调用标准
