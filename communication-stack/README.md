@@ -5,17 +5,18 @@
 + API(Application programming interface)
 + WS(Web Service)
 
-#### 通信协议
+#### 常用通信栈
 
-+ http + json
-+ soap
++ rest + json + http
++ soap + xml + http
 + grpc
 + graphQL
 
-#### 架构风格
+#### web service 协议
 
-+ restful
-+ web service
++ rest
++ soap
++ rpc
 
 #### java 远程调用标准
 
