@@ -30,6 +30,11 @@ import java.util.logging.Logger;
 public class HelloWorldServer {
     private static final Logger logger = Logger.getLogger(HelloWorldServer.class.getName());
 
+    /**
+     * 创建 Netty HTTP/2 服务端
+     * 将需要调用的服务端接口实现类注册到内部的 Registry中， RPC 调用时，可以根据 RPC 请求消息中的服务定义信息查...
+     * 创建 gRPC Server，它是 gRPC 服务端的抽象，聚合了各种 Listener，用于 RPC 消息的统一调度和...
+     */
     private Server server;
 
     private void start() throws IOException {
