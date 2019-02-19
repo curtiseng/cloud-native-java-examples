@@ -1,0 +1,7 @@
+/Applications/package/cloud-native-java-examples/communication-stack/rpc/google-grpc-json/server/target/generated-sources/protobuf/java/com/example/demo/HelloReply.java
+/Applications/package/cloud-native-java-examples/communication-stack/rpc/google-grpc-json/server/src/main/java/com/example/demo/HelloWorldServer.java
+/Applications/package/cloud-native-java-examples/communication-stack/rpc/google-grpc-json/server/target/generated-sources/protobuf/java/com/example/demo/HelloReplyOrBuilder.java
+/Applications/package/cloud-native-java-examples/communication-stack/rpc/google-grpc-json/server/target/generated-sources/protobuf/java/com/example/demo/HelloWorldProto.java
+/Applications/package/cloud-native-java-examples/communication-stack/rpc/google-grpc-json/server/target/generated-sources/protobuf/java/com/example/demo/HelloRequestOrBuilder.java
+/Applications/package/cloud-native-java-examples/communication-stack/rpc/google-grpc-json/server/target/generated-sources/protobuf/java/com/example/demo/HelloRequest.java
+/Applications/package/cloud-native-java-examples/communication-stack/rpc/google-grpc-json/server/target/generated-sources/protobuf/grpc-java/com/example/demo/GreeterGrpc.java
