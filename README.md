@@ -16,7 +16,7 @@
 + kubernetes原生ingress and engress和**nginx controller**
 + 下面可独立使用的中间件(**apollo**, **spring security oauth**, **spring-kafaka**)
 
-### spring cloud微服务解决方案：
+### Spring cloud微服务解决方案：
 ##### 可独立使用以及继承到istio方案里的中间件
 + config-center: **apollo**, spring cloud config(耦合)
 + sso: **spring security oauth**, keycloak, spring cloud security(耦合)
@@ -26,7 +26,7 @@
 + server-lb(gateway): zuul2+eureka+ribbon, spring cloud geteway
 + client-lb: ribbon+fegin, ribbon+restTempalte
 
-### istio微服务解决方案
+### Istio微服务解决方案
 ##### maybe change(替换):
 + **spring-retry**(native retry via envoy)
 
