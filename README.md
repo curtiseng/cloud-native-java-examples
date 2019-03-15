@@ -12,8 +12,8 @@
 + security: **spring web security**
 
 ### 单体过度:
-+ kubernetes部署
-+ kubernetes原生ingress and engress
++ kubernetes部署，单应用伸缩
++ kubernetes原生ingress and engress和**nginx controller**
 + 下面可独立使用的中间件(**apollo**, **spring security oauth**, **spring-kafaka**)
 
 ### spring cloud微服务解决方案：
