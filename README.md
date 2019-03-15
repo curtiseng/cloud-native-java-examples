@@ -1,7 +1,7 @@
 # cloud-native-java-examples
 
 ### 单体必须：
-+ base: java8, spring boot, spring mvc
++ base: **java8**, **spring boot**, **spring mvc**
 + communication-stack: **rest(OpenFegin, restTemplate)**, grpc, soap-cxf, soap-spring
 + cache: **redis(redisson)**, hazelcast with kubernetes
 + db pool: **druid**, HikariCP
