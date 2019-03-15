@@ -1,6 +1,7 @@
 # cloud-native-java-examples
 
 ### 单体必须：
++ base: java8, spring boot, spring mvc
 + communication-stack: **rest(OpenFegin, restTemplate)**, grpc, soap-cxf, soap-spring
 + cache: **redis(redisson)**, hazelcast with kubernetes
 + db pool: **druid**, HikariCP
@@ -11,7 +12,7 @@
 + metric: **micrometer**, prometheus-dropwizard(format the dropwizard metric as prometheus).
 + security: **spring web security**
 
-### 单体过度:
+### 单体过渡:
 + kubernetes部署，单应用伸缩
 + kubernetes原生ingress and engress和**nginx controller**
 + 下面可独立使用的中间件(**apollo**, **spring security oauth**, **spring-kafaka**)
