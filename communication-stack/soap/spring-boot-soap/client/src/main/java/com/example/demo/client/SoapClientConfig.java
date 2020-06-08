@@ -4,6 +4,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.ws.WebServiceMessageFactory;
+import org.springframework.ws.soap.SoapVersion;
+import org.springframework.ws.soap.saaj.SaajSoapMessageFactory;
+
+import javax.xml.soap.MessageFactory;
 
 /**
  * @author yangzifeng
@@ -21,11 +26,19 @@ public class SoapClientConfig {
     }
 
     @Bean
-    public ReadClient client(Jaxb2Marshaller marshaller) {
+    public SaajSoapMessageFactory messageFactory() {
+        SaajSoapMessageFactory messageFactory = new SaajSoapMessageFactory();
+        messageFactory.setSoapVersion(SoapVersion.SOAP_11);
+        return messageFactory;
+    }
+
+    @Bean
+    public ReadClient client(Jaxb2Marshaller marshaller, WebServiceMessageFactory messageFactory) {
         ReadClient client = new ReadClient();
         client.setDefaultUri("http://127.0.0.1/soap/Read");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
+        client.setMessageFactory(messageFactory);
         return client;
     }
 
