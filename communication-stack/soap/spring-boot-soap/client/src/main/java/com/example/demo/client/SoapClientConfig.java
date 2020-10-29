@@ -28,17 +28,17 @@ public class SoapClientConfig {
     @Bean
     public SaajSoapMessageFactory messageFactory() {
         SaajSoapMessageFactory messageFactory = new SaajSoapMessageFactory();
-        messageFactory.setSoapVersion(SoapVersion.SOAP_11);
+        messageFactory.setSoapVersion(SoapVersion.SOAP_12);
         return messageFactory;
     }
 
     @Bean
-    public ReadClient client(Jaxb2Marshaller marshaller, WebServiceMessageFactory messageFactory) {
+    public ReadClient client() {
         ReadClient client = new ReadClient();
         client.setDefaultUri("http://127.0.0.1/soap/Read");
-        client.setMarshaller(marshaller);
-        client.setUnmarshaller(marshaller);
-        client.setMessageFactory(messageFactory);
+        client.setMarshaller(marshaller());
+        client.setUnmarshaller(marshaller());
+        client.setMessageFactory(messageFactory());
         return client;
     }
 

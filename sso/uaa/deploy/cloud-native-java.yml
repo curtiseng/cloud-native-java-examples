@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uaa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: uaa
+  template:
+    metadata:
+      labels:
+        app: uaa
+    spec:
+# image pull from private docker register
+#      imagePullSecrets:
+#      - name: registry-key
+      containers:
+        - name: uaa
+          image: uaa:v0.0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              name: http
+          env:
+            - name: MYSQL_HOST
+              value: 127.0.0.1
+            - name: MYSQL_USERNAME
+              value: root
+            - name: MYSQL_PASSWORD
+              value: password
+            - name: REDIS_HOST
+              value: 127.0.0.1
+            - name: REDIS_PASSWORD
+              value: password
+          resources:
+            requests:
+              cpu: 200m
+              memory: 180Mi
+            limits:
+              cpu: 300m
+              memory: 300Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: uaa
+spec:
+  selector:
+    app: uaa
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 32000
+      protocol: TCP
+      name: http

@@ -1,0 +1,17 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /client3
+    session:
+      cookie:
+        name: CLIENT3SESSION
+security:
+  oauth2:
+    client:
+      client-id: client3
+      client-secret: 123456
+      user-authorization-uri: http://localhost:9999/uaa/oauth/authorize
+      access-token-uri: http://localhost:9999/uaa/oauth/token
+    resource:
+      jwt:
+        key-uri: http://localhost:9999/uaa/oauth/token_key

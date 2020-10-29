@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:3306/cloud?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:rootyzf}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    database: mysql
+    show-sql: true
+  liquibase:
+    contexts: dev
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: 6379
+    password: ${REDIS_PASSWORD:password}
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    enable:
+      root: false
+      jvm: true
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true

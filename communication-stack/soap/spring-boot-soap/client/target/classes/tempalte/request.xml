@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <Read xmlns="http://opcfoundation.org/webservices/XMLDA/1.0/">
+            <Options ReturnItemTime="true" ReturnItemName="true" ClientRequestHandle="" LocaleID="en-US" />
+            <ItemList>
+                <Items ItemName="通道 1.设备 1.标记 2" ClientItemHandle="37928256" ClientRequestHandle="37679336"/>
+                <Items ItemName="通道 1.设备 1.标记 1" ClientItemHandle="37520272" ClientRequestHandle="37679336"/>
+            </ItemList>
+        </Read>
+    </soap:Body>
+</soap:Envelope>
